@@ -4,51 +4,65 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@alifd/next':
-    specifier: ^1.25.27
-    version: 1.26.25(@alifd/meet-react@2.9.3)(moment@2.29.4)(react-dom@16.14.0)(react@16.14.0)
-  moment:
-    specifier: ^2.29.4
-    version: 2.29.4
-  react:
-    specifier: ^16.x
-    version: 16.14.0
-  react-dom:
-    specifier: ^16.x
-    version: 16.14.0(react@16.14.0)
-  regenerator-runtime:
-    specifier: ^0.14.0
-    version: 0.14.0
+importers:
 
-devDependencies:
-  '@alib/build-scripts':
-    specifier: ^0.1.3
-    version: 0.1.32(eslint@7.32.0)(typescript@5.2.2)
-  '@alifd/build-plugin-lowcode':
-    specifier: ^0.4.0
-    version: 0.4.7(@alifd/meet-react@2.9.3)(@types/react@16.14.47)(eslint@7.32.0)(moment@2.29.4)(postcss@7.0.39)(prop-types@15.8.1)(rax@1.2.3)(react-dom@16.14.0)(react@16.14.0)(sass@1.68.0)
-  '@types/react':
-    specifier: ^16.9.13
-    version: 16.14.47
-  '@types/react-dom':
-    specifier: ^16.9.4
-    version: 16.9.20
-  build-plugin-component:
-    specifier: ^1.0.0
-    version: 1.12.1(@types/react@16.14.47)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0)
-  build-plugin-fusion:
-    specifier: ^0.1.0
-    version: 0.1.23(@babel/core@7.23.0)(sass@1.68.0)(vite@4.4.9)(webpack@4.47.0)
-  build-plugin-moment-locales:
-    specifier: ^0.1.0
-    version: 0.1.3
-  f2elint:
-    specifier: ^1.2.0
-    version: 1.2.3(typescript@5.2.2)
-  template-component-demo:
-    specifier: ^2.0.3
-    version: 2.0.5(@types/react@16.14.47)(react@16.14.0)
+  .:
+    devDependencies:
+      '@alilc/lowcode-react-renderer':
+        specifier: ^1.1.10
+        version: 1.1.10(@alifd/meet-react@2.9.3)(moment@2.29.4)(react-dom@16.14.0)(react@16.14.0)
+      '@alilc/lowcode-utils':
+        specifier: ^1.1.10
+        version: 1.1.10(@alifd/meet-react@2.9.3)(moment@2.29.4)(react-dom@16.14.0)
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      style-loader:
+        specifier: '2'
+        version: 2.0.0(webpack@4.47.0)
+
+  packages/lc-button:
+    dependencies:
+      '@alifd/next':
+        specifier: ^1.25.27
+        version: 1.26.25(@alifd/meet-react@2.9.3)(moment@2.29.4)(react-dom@16.14.0)(react@16.14.0)
+      moment:
+        specifier: ^2.29.4
+        version: 2.29.4
+      react:
+        specifier: ^16.x
+        version: 16.14.0
+      react-dom:
+        specifier: ^16.x
+        version: 16.14.0(react@16.14.0)
+    devDependencies:
+      '@alib/build-scripts':
+        specifier: ^0.1.3
+        version: 0.1.32(eslint@7.32.0)(typescript@5.2.2)
+      '@alifd/build-plugin-lowcode':
+        specifier: ^0.4.0
+        version: 0.4.7(@alifd/meet-react@2.9.3)(@types/react@16.14.48)(eslint@7.32.0)(moment@2.29.4)(postcss@7.0.39)(prop-types@15.8.1)(rax@1.2.3)(react-dom@16.14.0)(react@16.14.0)(sass@1.68.0)
+      '@types/react':
+        specifier: ^16.9.13
+        version: 16.14.48
+      '@types/react-dom':
+        specifier: ^16.9.4
+        version: 16.9.20
+      build-plugin-component:
+        specifier: ^1.0.0
+        version: 1.12.1(@types/react@16.14.48)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0)
+      build-plugin-fusion:
+        specifier: ^0.1.0
+        version: 0.1.23(@babel/core@7.23.0)(sass@1.68.0)(vite@4.4.9)(webpack@4.47.0)
+      build-plugin-moment-locales:
+        specifier: ^0.1.0
+        version: 0.1.3
+      f2elint:
+        specifier: ^1.2.0
+        version: 1.2.3(typescript@5.2.2)
+      template-component-demo:
+        specifier: ^2.0.3
+        version: 2.0.5(@types/react@16.14.48)(react@16.14.0)
 
 packages:
 
@@ -92,7 +106,7 @@ packages:
       - webpack-command
     dev: true
 
-  /@alifd/build-plugin-lowcode@0.4.7(@alifd/meet-react@2.9.3)(@types/react@16.14.47)(eslint@7.32.0)(moment@2.29.4)(postcss@7.0.39)(prop-types@15.8.1)(rax@1.2.3)(react-dom@16.14.0)(react@16.14.0)(sass@1.68.0):
+  /@alifd/build-plugin-lowcode@0.4.7(@alifd/meet-react@2.9.3)(@types/react@16.14.48)(eslint@7.32.0)(moment@2.29.4)(postcss@7.0.39)(prop-types@15.8.1)(rax@1.2.3)(react-dom@16.14.0)(react@16.14.0)(sass@1.68.0):
     resolution: {integrity: sha512-2xqJpCLnEGgpy0c3nuzOYReWyG2SxI34cFRatSnwg3y/b5Exuen4qUcPQcmpk2b42dIP1ZqHobeLcYaUaL+KPg==}
     dependencies:
       '@alilc/lowcode-material-parser': 1.0.3
@@ -102,7 +116,7 @@ packages:
       '@alilc/lowcode-utils': 1.1.10(@alifd/meet-react@2.9.3)(moment@2.29.4)(react-dom@16.14.0)
       '@babel/core': 7.23.0
       axios: 0.21.4
-      build-plugin-component: 1.12.1(@types/react@16.14.47)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0)
+      build-plugin-component: 1.12.1(@types/react@16.14.48)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0)
       build-scripts-config: 3.0.3(@babel/core@7.23.0)(webpack@4.47.0)
       chokidar: 3.5.3
       cross-spawn-promise: 0.10.2
@@ -2068,7 +2082,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.4.5(@babel/core@7.23.0)
       babel-plugin-polyfill-corejs3: 0.8.4(@babel/core@7.23.0)
       babel-plugin-polyfill-regenerator: 0.5.2(@babel/core@7.23.0)
-      core-js-compat: 3.32.2
+      core-js-compat: 3.33.0
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
@@ -2270,10 +2284,10 @@ packages:
     dependencies:
       ansi-html: 0.0.7
       ansi-html-community: 0.0.8
-      caniuse-lite: 1.0.30001541
+      caniuse-lite: 1.0.30001543
       chalk: 4.1.2
       chokidar: 3.5.2
-      core-js-pure: 3.32.2
+      core-js-pure: 3.33.0
       error-stack-parser: 2.1.4
       html-entities: 2.4.0
       jest-worker: 27.0.6
@@ -2309,7 +2323,7 @@ packages:
       '@commitlint/load': 11.0.0
       '@commitlint/read': 11.0.0
       chalk: 4.1.0
-      core-js: 3.32.2
+      core-js: 3.33.0
       get-stdin: 8.0.0
       lodash: 4.17.21
       resolve-from: 5.0.0
@@ -2747,7 +2761,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       chalk: 4.1.2
       jest-message-util: 26.6.2
       jest-util: 26.6.2
@@ -2763,7 +2777,7 @@ packages:
       '@jest/test-result': 26.6.2
       '@jest/transform': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       exit: 0.1.2
@@ -2800,7 +2814,7 @@ packages:
     dependencies:
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       jest-mock: 26.6.2
     dev: true
 
@@ -2821,7 +2835,7 @@ packages:
     dependencies:
       '@jest/types': 26.6.2
       '@sinonjs/fake-timers': 6.0.1
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       jest-message-util: 26.6.2
       jest-mock: 26.6.2
       jest-util: 26.6.2
@@ -2986,7 +3000,7 @@ packages:
     dependencies:
       '@types/istanbul-lib-coverage': 2.0.4
       '@types/istanbul-reports': 3.0.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       '@types/yargs': 15.0.16
       chalk: 4.1.2
     dev: true
@@ -3175,13 +3189,13 @@ packages:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
     dev: true
 
   /@types/graceful-fs@4.1.7:
     resolution: {integrity: sha512-MhzcwU8aUygZroVwL2jeYk6JisJrPl/oov/gsgGCue9mkgl9wjGbzReYQClxiUgFDnib9FuHqTndccKeZKxTRw==}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
     dev: true
 
   /@types/hast@2.3.6:
@@ -3247,8 +3261,8 @@ packages:
     resolution: {integrity: sha512-xPSg0jm4mqgEkNhowKgZFBNtwoEwF6gJ4Dhww+GFpm3IgtNseHQZ5IqdNwnquZEoANxyDAKDRAdVo4Z72VvD/g==}
     dev: true
 
-  /@types/node@20.7.2:
-    resolution: {integrity: sha512-RcdC3hOBOauLP+r/kRt27NrByYtDjsXyAuSbR87O6xpsvi763WI+5fbSIvYJrXnt9w4RuxhV6eAXfIs7aaf/FQ==}
+  /@types/node@20.8.2:
+    resolution: {integrity: sha512-Vvycsc9FQdwhxE3y3DzeIxuEJbWGDsnrxvMADzTDF/lcdR9/K+AQIeAghTQsHtotg/q0j3WEOYS/jQgSdWue3w==}
     dev: true
 
   /@types/normalize-package-data@2.4.2:
@@ -3263,8 +3277,8 @@ packages:
     resolution: {integrity: sha512-+68kP9yzs4LMp7VNh8gdzMSPZFL44MLGqiHWvttYJe+6qnuVr4Ek9wSBQoveqY/r+LwjCcU29kNVkidwim+kYA==}
     dev: true
 
-  /@types/prop-types@15.7.7:
-    resolution: {integrity: sha512-FbtmBWCcSa2J4zL781Zf1p5YUBXQomPEcep9QZCfRfQgTxz3pJWiDFLebohZ9fFntX5ibzOkSsrJ0TEew8cAog==}
+  /@types/prop-types@15.7.8:
+    resolution: {integrity: sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==}
 
   /@types/q@1.5.6:
     resolution: {integrity: sha512-IKjZ8RjTSwD4/YG+2gtj7BPFRB/lNbWKTiSj3M7U/TD2B7HfYCxvp2Zz6xA2WIY7pAuL1QOUPw8gQRbUrrq4fQ==}
@@ -3273,18 +3287,18 @@ packages:
   /@types/react-dom@16.9.20:
     resolution: {integrity: sha512-sYJBek61QO1qeZOnGy79jOaQnQK/sT5CHK0gmwEhMzbhrgpRWoxdEXRaaR96vGfRttWliKG82SVrWbc6WRNwng==}
     dependencies:
-      '@types/react': 16.14.47
+      '@types/react': 16.14.48
     dev: true
 
   /@types/react-transition-group@4.4.7:
     resolution: {integrity: sha512-ICCyBl5mvyqYp8Qeq9B5G/fyBSRC0zx3XM3sCC6KkcMsNeAHqXBKkmat4GqdJET5jtYUpZXrxI5flve5qhi2Eg==}
     dependencies:
-      '@types/react': 16.14.47
+      '@types/react': 16.14.48
 
-  /@types/react@16.14.47:
-    resolution: {integrity: sha512-m0EmmY73mbQegA+aqo0+O/hHU9iTi+hNYotJ3cM4sLFox8NqZv3XVXQhhqpd3YH6YC7h+YIyJFd36O5KlaJLCA==}
+  /@types/react@16.14.48:
+    resolution: {integrity: sha512-7HP7K9IyuP6CpxEHmfRPEl21pwra+nSgZHXhyq7WOkxhIGYtSpIHJBijh4zuScgelrPxsUXVPDRkSKHhT+6nkg==}
     dependencies:
-      '@types/prop-types': 15.7.7
+      '@types/prop-types': 15.7.8
       '@types/scheduler': 0.16.4
       csstype: 3.1.2
 
@@ -3320,7 +3334,7 @@ packages:
   /@types/webpack-sources@3.2.1:
     resolution: {integrity: sha512-iLC3Fsx62ejm3ST3PQ8vBMC54Rb3EoCprZjeJGI5q+9QjfDLGt9jeg/k245qz1G9AQnORGk0vqPicJFPT1QODQ==}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       '@types/source-list-map': 0.1.3
       source-map: 0.7.4
     dev: true
@@ -3328,7 +3342,7 @@ packages:
   /@types/webpack@4.41.34:
     resolution: {integrity: sha512-CN2aOGrR3zbMc2v+cKqzaClYP1ldkpPOgtdNvgX+RmlWCSWxHxpzz6WSCVQZRkF8D60ROlkRzAoEpgjWQ+bd2g==}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       '@types/tapable': 1.0.9
       '@types/uglify-js': 3.17.2
       '@types/webpack-sources': 3.2.1
@@ -4263,7 +4277,7 @@ packages:
     hasBin: true
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001541
+      caniuse-lite: 1.0.30001543
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
@@ -4531,7 +4545,7 @@ packages:
     dependencies:
       '@babel/core': 7.23.0
       '@babel/helper-define-polyfill-provider': 0.4.2(@babel/core@7.23.0)
-      core-js-compat: 3.32.2
+      core-js-compat: 3.33.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4920,8 +4934,8 @@ packages:
     resolution: {integrity: sha512-TpfK0TDgv71dzuTsEAlQiHeWQ/tiPqgNZVdv046fvNtBZrjbv2O3TsWCDU0AWGJJKCF/KsjNdLzR9hXOsh/CfA==}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001541
-      electron-to-chromium: 1.4.537
+      caniuse-lite: 1.0.30001543
+      electron-to-chromium: 1.4.539
       node-releases: 1.1.77
       pkg-up: 3.1.0
     dev: true
@@ -4931,8 +4945,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001541
-      electron-to-chromium: 1.4.537
+      caniuse-lite: 1.0.30001543
+      electron-to-chromium: 1.4.539
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: true
@@ -4941,8 +4955,8 @@ packages:
     resolution: {integrity: sha512-9rGNDtnj+HaahxiVV38Gn8n8Lr8REKsel68v1sPFfIGEK6uSXTY3h9acgiT1dZVtOOUtifo/Dn8daDQ5dUgVsA==}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001541
-      electron-to-chromium: 1.4.537
+      caniuse-lite: 1.0.30001543
+      electron-to-chromium: 1.4.539
       node-releases: 1.1.77
     dev: true
 
@@ -4979,7 +4993,7 @@ packages:
       ieee754: 1.2.1
     dev: true
 
-  /build-plugin-component@1.12.1(@types/react@16.14.47)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0):
+  /build-plugin-component@1.12.1(@types/react@16.14.48)(eslint@7.32.0)(postcss@7.0.39)(rax@1.2.3)(react@16.14.0)(sass@1.68.0):
     resolution: {integrity: sha512-f4YrCiCjSsVcGH53cavAXGLgIEnYUNhgW2g7yygimAZNg9576q/v9aLDtxAshcP+4tskcvlsbRNpMJw/lWaDNQ==}
     engines: {node: '>=12'}
     dependencies:
@@ -5001,7 +5015,7 @@ packages:
       chalk: 4.1.2
       chokidar: 3.5.3
       console-clear: 1.1.1
-      core-js: 3.32.2
+      core-js: 3.33.0
       error-stack-tracey: 0.1.5
       fs-extra: 8.1.0
       handlebars: 4.7.8
@@ -5031,7 +5045,7 @@ packages:
       react-docgen-typescript: 2.2.2(typescript@4.9.5)
       sass-loader: 10.4.1(sass@1.68.0)(webpack@4.47.0)
       style-loader: 1.3.0(webpack@4.47.0)
-      template-component-demo: 2.0.5(@types/react@16.14.47)(react@16.14.0)
+      template-component-demo: 2.0.5(@types/react@16.14.48)(react@16.14.0)
       terser-webpack-plugin: 4.2.3(webpack@4.47.0)
       time-fix-plugin: 2.0.7(webpack@4.47.0)
       typescript: 4.9.5
@@ -5106,7 +5120,7 @@ packages:
       babel-loader: 8.3.0(@babel/core@7.23.0)(webpack@4.47.0)
       camelcase: 5.3.1
       case-sensitive-paths-webpack-plugin: 2.4.0
-      core-js: 3.32.2
+      core-js: 3.33.0
       css-loader: 3.6.0(webpack@4.47.0)
       file-loader: 5.1.0(webpack@4.47.0)
       identity-obj-proxy: 3.0.0
@@ -5335,13 +5349,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001541
+      caniuse-lite: 1.0.30001543
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: true
 
-  /caniuse-lite@1.0.30001541:
-    resolution: {integrity: sha512-bLOsqxDgTqUBkzxbNlSBt8annkDpQB9NdzdTbO2ooJ+eC/IQcvDspDc058g84ejCelF7vHUx57KIOjEecOHXaw==}
+  /caniuse-lite@1.0.30001543:
+    resolution: {integrity: sha512-qxdO8KPWPQ+Zk6bvNpPeQIOH47qZSYdFZd6dXQzb2KzhnSXju4Kd7H1PkSJx6NICSMgo/IhRZRhhfPTHYpJUCA==}
     dev: true
 
   /capital-case@1.0.4:
@@ -5948,14 +5962,14 @@ packages:
       webpack-log: 2.0.0
     dev: true
 
-  /core-js-compat@3.32.2:
-    resolution: {integrity: sha512-+GjlguTDINOijtVRUxrQOv3kfu9rl+qPNdX2LTbJ/ZyVTuxK+ksVSAGX1nHstu4hrv1En/uPTtWgq2gI5wt4AQ==}
+  /core-js-compat@3.33.0:
+    resolution: {integrity: sha512-0w4LcLXsVEuNkIqwjjf9rjCoPhK8uqA4tMRh4Ge26vfLtUutshn+aRJU21I9LCJlh2QQHfisNToLjw1XEJLTWw==}
     dependencies:
       browserslist: 4.22.1
     dev: true
 
-  /core-js-pure@3.32.2:
-    resolution: {integrity: sha512-Y2rxThOuNywTjnX/PgA5vWM6CZ9QB9sz9oGeCixV8MqXZO70z/5SHzf9EeBrEBK0PN36DnEBBu9O/aGWzKuMZQ==}
+  /core-js-pure@3.33.0:
+    resolution: {integrity: sha512-FKSIDtJnds/YFIEaZ4HszRX7hkxGpNKM7FC9aJ9WLJbSd3lD4vOltFuVIBLR8asSx9frkTSqL0dw90SKQxgKrg==}
     requiresBuild: true
     dev: true
 
@@ -5964,8 +5978,8 @@ packages:
     deprecated: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
     requiresBuild: true
 
-  /core-js@3.32.2:
-    resolution: {integrity: sha512-pxXSw1mYZPDGvTQqEc5vgIb83jGQKFGYWY76z4a7weZXUolw3G+OvpZqSRcfYOoOVUQJYEPsWeQK8pKEnUtWxQ==}
+  /core-js@3.33.0:
+    resolution: {integrity: sha512-HoZr92+ZjFEKar5HS6MC776gYslNOKHt75mEBKWKnPeFDpZ6nH5OeF3S6HFT1mUAUZKrzkez05VboaX8myjSuw==}
     requiresBuild: true
     dev: true
 
@@ -6865,8 +6879,8 @@ packages:
       jake: 10.8.7
     dev: true
 
-  /electron-to-chromium@1.4.537:
-    resolution: {integrity: sha512-W1+g9qs9hviII0HAwOdehGYkr+zt7KKdmCcJcjH0mYg6oL8+ioT3Skjmt7BLoAQqXhjf40AXd+HlR4oAWMlXjA==}
+  /electron-to-chromium@1.4.539:
+    resolution: {integrity: sha512-wRmWJ8F7rgmINuI32S6r2SLrw/h/bJQsDSvBiq9GBfvc2Lh73qTOwn73r3Cf67mjVgFGJYcYtmERzySa5jIWlg==}
     dev: true
 
   /elliptic@6.5.4:
@@ -10328,7 +10342,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       jest-mock: 26.6.2
       jest-util: 26.6.2
       jsdom: 16.7.0
@@ -10346,7 +10360,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/fake-timers': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       jest-mock: 26.6.2
       jest-util: 26.6.2
     dev: true
@@ -10383,7 +10397,7 @@ packages:
     dependencies:
       '@jest/types': 26.6.2
       '@types/graceful-fs': 4.1.7
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -10409,7 +10423,7 @@ packages:
       '@jest/source-map': 26.6.2
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       chalk: 4.1.2
       co: 4.6.0
       expect: 26.6.2
@@ -10491,7 +10505,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
     dev: true
 
   /jest-pnp-resolver@1.2.3(jest-resolve@26.6.2):
@@ -10549,7 +10563,7 @@ packages:
       '@jest/environment': 26.6.2
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       chalk: 4.1.2
       emittery: 0.7.2
       exit: 0.1.2
@@ -10622,7 +10636,7 @@ packages:
     resolution: {integrity: sha512-S5wqyz0DXnNJPd/xfIzZ5Xnp1HrJWBczg8mMfMpN78OJ5eDxXyf+Ygld9wX1DnUWbIbhM1YDY95NjR4CBXkb2g==}
     engines: {node: '>= 10.14.2'}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       graceful-fs: 4.2.11
     dev: true
 
@@ -10689,7 +10703,7 @@ packages:
     engines: {node: '>= 10.14.2'}
     dependencies:
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       chalk: 4.1.2
       graceful-fs: 4.2.11
       is-ci: 2.0.0
@@ -10714,7 +10728,7 @@ packages:
     dependencies:
       '@jest/test-result': 26.6.2
       '@jest/types': 26.6.2
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       jest-util: 26.6.2
@@ -10741,7 +10755,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: true
@@ -10750,7 +10764,7 @@ packages:
     resolution: {integrity: sha512-qupxcj/dRuA3xHPMUd40gr2EaAurFbkwzOh7wfPaeE9id7hyjURRQoqNfHifHK3XjJU6YJJUQKILGUnwGPEOCA==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -13548,7 +13562,7 @@ packages:
     dependencies:
       autoprefixer: 9.8.8
       browserslist: 4.22.1
-      caniuse-lite: 1.0.30001541
+      caniuse-lite: 1.0.30001543
       css-blank-pseudo: 0.1.4
       css-has-pseudo: 0.10.0
       css-prefers-color-scheme: 3.1.1
@@ -13880,7 +13894,6 @@ packages:
 
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
-    requiresBuild: true
     dev: true
 
   /pseudomap@1.0.2:
@@ -14358,14 +14371,14 @@ packages:
   /react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
-  /react-markdown@7.1.2(@types/react@16.14.47)(react@16.14.0):
+  /react-markdown@7.1.2(@types/react@16.14.48)(react@16.14.0):
     resolution: {integrity: sha512-ibMcc0EbfmbwApqJD8AUr0yls8BSrKzIbHaUsPidQljxToCqFh34nwtu3CXNEItcVJNzpjDHrhK8A+MAh2JW3A==}
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
     dependencies:
       '@types/hast': 2.3.6
-      '@types/react': 16.14.47
+      '@types/react': 16.14.48
       '@types/unist': 2.0.8
       comma-separated-tokens: 2.0.3
       hast-util-whitespace: 2.0.1
@@ -16121,14 +16134,14 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /template-component-demo@2.0.5(@types/react@16.14.47)(react@16.14.0):
+  /template-component-demo@2.0.5(@types/react@16.14.48)(react@16.14.0):
     resolution: {integrity: sha512-H9h7cLP6zAH96l/q9+Z+VnlbBj6YBmVqp4DHN5Qm0Zp0R4coqbcajAEtGRTTuVmTUfnVWeituMwwtpUABVDNpQ==}
     peerDependencies:
       react: '>=16.8'
     dependencies:
       query-string: 6.14.1
       react: 16.14.0
-      react-markdown: 7.1.2(@types/react@16.14.47)(react@16.14.0)
+      react-markdown: 7.1.2(@types/react@16.14.48)(react@16.14.0)
       react-router-dom: 5.3.4(react@16.14.0)
     transitivePeerDependencies:
       - '@types/react'
@@ -16443,7 +16456,7 @@ packages:
   /ts-polyfill@3.8.2:
     resolution: {integrity: sha512-x0M4kx+FObO88sedZ1zld+YX+GvcgaYSVnHspNftI4GRT86FTBy41O89ztKfvue0XtaKpb8WBpPZsh82hy3Ncw==}
     dependencies:
-      core-js: 3.32.2
+      core-js: 3.33.0
     dev: true
 
   /tsconfig-paths@3.14.2:
