@@ -1,10 +1,20 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  OnModuleInit,
+  OnApplicationBootstrap,
+} from '@nestjs/common';
 import { DddService } from './ddd.service';
 import { CreateDddDto } from './dto/create-ddd.dto';
 import { UpdateDddDto } from './dto/update-ddd.dto';
 
 @Controller('ddd')
-export class DddController {
+export class DddController implements OnModuleInit, OnApplicationBootstrap {
   constructor(private readonly dddService: DddService) {}
 
   @Post()
@@ -30,5 +40,12 @@ export class DddController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.dddService.remove(+id);
+  }
+
+  onModuleInit() {
+    console.log('dddController OnModuleInit');
+  }
+  onApplicationBootstrap() {
+    console.log('dddController OnApplicationBootstrap');
   }
 }

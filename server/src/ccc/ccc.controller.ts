@@ -1,10 +1,20 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  OnModuleInit,
+  OnApplicationBootstrap,
+} from '@nestjs/common';
 import { CccService } from './ccc.service';
 import { CreateCccDto } from './dto/create-ccc.dto';
 import { UpdateCccDto } from './dto/update-ccc.dto';
 
 @Controller('ccc')
-export class CccController {
+export class CccController implements OnModuleInit, OnApplicationBootstrap {
   constructor(private readonly cccService: CccService) {}
 
   @Post()
@@ -30,5 +40,13 @@ export class CccController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.cccService.remove(+id);
+  }
+
+  onModuleInit() {
+    console.log('cccController OnModuleInit');
+  }
+
+  onApplicationBootstrap() {
+    console.log('cccController OnApplicationBootstrap');
   }
 }
