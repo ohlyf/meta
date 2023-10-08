@@ -8,13 +8,13 @@ order: 1
 ```jsx
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import ExampleComponent from '@ohlyf/lc-button';
+import LcCommonTabItem from '@ohlyf/lc-common-tab-item';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ExampleComponent />
+        <LcCommonTabItem />
       </div>
     );
   }

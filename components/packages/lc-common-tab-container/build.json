@@ -1,12 +1,14 @@
 {
-  "library": "BizComp",
+  "library": "LcCommonTabContainer",
   "plugins": [
     "build-plugin-component",
     "build-plugin-fusion",
     [
       "build-plugin-moment-locales",
       {
-        "locales": ["zh-cn"]
+        "locales": [
+          "zh-cn"
+        ]
       }
     ]
   ]
