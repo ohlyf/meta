@@ -1,6 +1,6 @@
 {
   "name": "@ohlyf/lc-common-tab-item",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "@ohlyf/lc-common-tab-item",
   "files": [
     "demo/",
@@ -76,11 +76,11 @@
     "name": "ExampleComponent",
     "title": "demo component",
     "category": "Information",
-    "materialSchema": "https://unpkg.com/@ohlyf/lc-common-tab-item@0.2.0/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/@ohlyf/lc-common-tab-item@0.3.0/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
   },
   "license": "MIT",
-  "homepage": "https://unpkg.com/@ohlyf/lc-common-tab-item@0.2.0/build/index.html"
+  "homepage": "https://unpkg.com/@ohlyf/lc-common-tab-item@0.3.0/build/index.html"
 }
