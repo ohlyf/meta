@@ -1,13 +1,12 @@
 import { init, plugins } from '@alilc/lowcode-engine';
-import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler'
+import { createFetchHandler } from '@alilc/lowcode-datasource-fetch-handler';
 import EditorInitPlugin from './plugins/plugin-editor-init';
 import UndoRedoPlugin from '@alilc/lowcode-plugin-undo-redo';
-import ZhEnPlugin from '@alilc/lowcode-plugin-zh-en';
 import CodeGenPlugin from '@alilc/lowcode-plugin-code-generator';
 import DataSourcePanePlugin from '@alilc/lowcode-plugin-datasource-pane';
 import SchemaPlugin from '@alilc/lowcode-plugin-schema';
-import CodeEditorPlugin from "@alilc/lowcode-plugin-code-editor";
-import ManualPlugin from "@alilc/lowcode-plugin-manual";
+import CodeEditorPlugin from '@alilc/lowcode-plugin-code-editor';
+import ManualPlugin from '@alilc/lowcode-plugin-manual';
 import InjectPlugin from '@alilc/lowcode-plugin-inject';
 import SimulatorResizerPlugin from '@alilc/lowcode-plugin-simulator-select';
 import ComponentPanelPlugin from './plugins/plugin-component-panel';
@@ -17,9 +16,6 @@ import SaveSamplePlugin from './plugins/plugin-save-sample';
 import PreviewSamplePlugin from './plugins/plugin-preview-sample';
 import CustomSetterSamplePlugin from './plugins/plugin-custom-setter-sample';
 import SetRefPropPlugin from '@alilc/lowcode-plugin-set-ref-prop';
-import LogoSamplePlugin from './plugins/plugin-logo-sample';
-import SimulatorLocalePlugin from './plugins/plugin-simulator-locale';
-import lowcodePlugin from './plugins/plugin-lowcode-component';
 import appHelper from './appHelper';
 import './global.scss';
 
@@ -28,29 +24,11 @@ async function registerPlugins() {
 
   await plugins.register(EditorInitPlugin, {
     scenarioName: 'general',
-    displayName: '综合场景',
-    info: {
-      urls: [
-        {
-          key: '设计器',
-          value: 'https://github.com/alibaba/lowcode-demo/tree/main/demo-general',
-        },
-        {
-          key: 'fusion-ui 物料',
-          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-ui',
-        },
-        {
-          key: 'fusion 物料',
-          value: 'https://github.com/alibaba/lowcode-materials/tree/main/packages/fusion-lowcode-materials',
-        }
-      ],
-    },
+    displayName: '营销搭建平台',
   });
 
   // 设置内置 setter 和事件绑定、插件绑定面板
   await plugins.register(DefaultSettersRegistryPlugin);
-
-  await plugins.register(LogoSamplePlugin);
 
   await plugins.register(ComponentPanelPlugin);
 
@@ -60,9 +38,6 @@ async function registerPlugins() {
 
   // 注册回退/前进
   await plugins.register(UndoRedoPlugin);
-
-  // 注册中英文切换
-  await plugins.register(ZhEnPlugin);
 
   await plugins.register(SetRefPropPlugin);
 
@@ -79,8 +54,8 @@ async function registerPlugins() {
       },
       {
         type: 'jsonp',
-      }
-    ]
+      },
+    ],
   });
 
   await plugins.register(CodeEditorPlugin);
@@ -93,12 +68,7 @@ async function registerPlugins() {
   await plugins.register(PreviewSamplePlugin);
 
   await plugins.register(CustomSetterSamplePlugin);
-
-  // 设计器区域多语言切换
-  await plugins.register(SimulatorLocalePlugin);
-
-  await plugins.register(lowcodePlugin);
-};
+}
 
 (async function main() {
   await registerPlugins();

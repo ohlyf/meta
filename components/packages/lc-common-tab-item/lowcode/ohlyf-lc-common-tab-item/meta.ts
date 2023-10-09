@@ -6,10 +6,11 @@ const OhlyfLcCommonTabItemMeta: IPublicTypeComponentMetadata = {
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
+  group: '通用组件',
   npm: {
     package: '@ohlyf/lc-common-tab-item',
-    version: '0.1.0',
-    exportName: 'default',
+    version: '0.3.0',
+    exportName: 'OhlyfLcCommonTabItem',
     main: 'src/index.tsx',
     destructuring: false,
     subName: '',
