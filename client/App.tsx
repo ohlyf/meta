@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, SafeAreaView, Text } from "react-native";
+import React, { useState } from "react";
 
 export default function App() {
+  const baseStyle = {
+    width: 50,
+    height: 50,
+    backgroundColor: "red",
+  };
+
+  const [doubleTap, setDoubleTap] = useState(false);
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <Pressable
+        onPress={() => {
+          if (doubleTap) {
+            // 双击逻辑
+            console.log("Double tap detected");
+          }
+          setDoubleTap(true);
+          setTimeout(() => {
+            setDoubleTap(false);
+          }, 300);
+        }}
+      >
+        <Text>双击我</Text>
+      </Pressable>
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
