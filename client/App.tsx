@@ -1,3 +1,4 @@
+
 import { SafeAreaView, TextInput, Text } from "react-native";
 import React, { useState } from "react";
 import AutoNextFocusTextInputs from "./src/components/AutoNextFocusTextInputs";

@@ -8,11 +8,9 @@ const EditorInitPlugin = (ctx: IPublicModelPluginContext, options: any) => {
       const { material, project, config } = ctx;
       const scenarioName = options['scenarioName'];
       const scenarioDisplayName = options['displayName'] || scenarioName;
-      const scenarioInfo = options['info'] || {};
       // 保存在 config 中用于引擎范围其他插件使用
       config.set('scenarioName', scenarioName);
       config.set('scenarioDisplayName', scenarioDisplayName);
-      config.set('scenarioInfo', scenarioInfo);
 
       // 设置物料描述
 

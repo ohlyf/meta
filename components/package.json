@@ -9,9 +9,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@alilc/build-plugin-alt": "^1.3.4",
     "@alilc/lowcode-react-renderer": "^1.1.10",
     "@alilc/lowcode-utils": "^1.1.10",
+    "antd-mobile": "^5.32.4",
+    "babel-plugin-import": "^1.13.8",
     "lodash": "^4.17.21",
+    "regenerator-runtime": "^0.14.0",
     "style-loader": "2"
   }
 }
