@@ -1,30 +1,16 @@
-import { Pressable, SafeAreaView, Text } from "react-native";
+
+import { SafeAreaView, TextInput, Text } from "react-native";
 import React, { useState } from "react";
-
+import AutoNextFocusTextInputs from "./src/components/AutoNextFocusTextInputs";
+import VerificationCode from "./src/components/VerificationCode";
 export default function App() {
-  const baseStyle = {
-    width: 50,
-    height: 50,
-    backgroundColor: "red",
-  };
+  const ref1 = React.useRef<TextInput>(null);
+  const ref2 = React.useRef<TextInput>(null);
+  const ref3 = React.useRef<TextInput>(null);
 
-  const [doubleTap, setDoubleTap] = useState(false);
   return (
     <SafeAreaView>
-      <Pressable
-        onPress={() => {
-          if (doubleTap) {
-            // 双击逻辑
-            console.log("Double tap detected");
-          }
-          setDoubleTap(true);
-          setTimeout(() => {
-            setDoubleTap(false);
-          }, 300);
-        }}
-      >
-        <Text>双击我</Text>
-      </Pressable>
+      <VerificationCode />
     </SafeAreaView>
   );
 }
