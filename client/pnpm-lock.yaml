@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@expo/vector-icons':
+    specifier: ^13.0.0
+    version: 13.0.0
   '@expo/webpack-config':
     specifier: ^19.0.0
     version: 19.0.0(expo@49.0.15)
