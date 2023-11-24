@@ -1,12 +1,12 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, Text, View} from 'react-native';
-
+import {SafeAreaView, StatusBar, View} from 'react-native';
+import ImageComponent from './components/ImageComponent';
 const App = () => {
   return (
     <SafeAreaView>
       <StatusBar />
       <View>
-        <Text style={{fontSize: 24}}>Hello World</Text>
+        <ImageComponent />
       </View>
     </SafeAreaView>
   );
